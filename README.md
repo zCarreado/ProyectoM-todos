@@ -1,2 +1,2 @@
 # ProyectoM-todos
-proyecto consta de los contenidos del curso de Métodos Numéricos
+repositorio temporal para el manejo de ramas
