@@ -1,4 +1,5 @@
 import math as mt
+import matplotlib.pyplot as plt
 import numpy as np
 
 def biseccion(a,b):
@@ -24,7 +25,7 @@ def biseccion(a,b):
 
 def fx(x):
 
-    return (np.exp(x)/2)+((1/3)*x**2)-(1/x**3)-2
+    return 2*x**2 - 5
 
 
 def busca_intervalo(a,b):
@@ -57,12 +58,11 @@ def main():
 
    
     while (i <= b):
-        print("Buscando en el intervalo... (",a,",",i,")")
+        
         if(busca_intervalo(a,i)):
             print("\t\t Hay una raiz \n\t\t Haciendo la biseccion...")
             r = biseccion(a,i)
-            print("**********************************************************************\n*\t\t\t La raiz es: ", r
-                  , "\n**********************************************************************")
+            
             raices.append(r)
 
         a = round(i,3)
@@ -73,7 +73,28 @@ def main():
     res = int(input())
     if (res == 1):
         print("Raices -> ",raices)
+        #Graficas 
+        x = np.linspace(-3, 3, 50)
+        y1 = fx(x)
+        
 
+        # Gráfica de funcionN(x)
+
+        plt.plot(x, y1, 'g')
+        
+        plt.axhline(y=0,color='black',linestyle='--')
+        plt.axvline(x=0,color='black',linestyle='--')
+        plt.scatter(r,0,color='red')
+        plt.title('Raiz(x)')
+        plt.grid(True)
+        plt.xlabel('Eje de las x')
+        plt.ylabel('Eje de las y')
+    
+
+
+
+        plt.tight_layout()  # Ajusta los subplots para evitar superposiciones
+        plt.show()
 
 
 # Ejecuta la funcion principal

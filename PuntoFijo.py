@@ -34,12 +34,12 @@ print("El número más cercano a cero es:", x0)
 #Entradas
 contador = 0
 xi = x0
-umbral = 1000  # Umbral de divergencia
+err = 1000  # err 
 while contador < 10:
     gx = round(funciong2(xi),2)
     fx = round(funcionN(xi),5)
     print("i =", contador+1 ,"/  xi="," ",xi,"/  gx=", gx , "/  fx=",fx)
-    if abs(gx) > umbral:
+    if abs(gx) > err:
         print("El resultado de gx se aleja de cero. La solución ha divergido 2*x**2 - 5 no es la solucion.")
         break
     xi = gx 
@@ -73,6 +73,7 @@ y2 = funciong1(x)
 # Gráfica de funcionN(x)
 
 plt.plot(x, y1, 'g')
+plt.plot(x,y2,'g')
 plt.axhline(y=0,color='black',linestyle='--')
 plt.axvline(x=0,color='black',linestyle='--')
 plt.scatter(raiz,0,color='red')
