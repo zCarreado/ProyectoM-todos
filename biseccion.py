@@ -73,6 +73,13 @@ def main():
     res = int(input())
     if (res == 1):
         print("Raices -> ",raices)
+
+
+# Ejecuta la funcion principal
+if __name__ == '__main__':
+    main()
+    
+def graficar(a, b):
         #Graficas 
         x = np.linspace(-3, 3, 50)
         y1 = fx(x)
@@ -84,7 +91,7 @@ def main():
         
         plt.axhline(y=0,color='black',linestyle='--')
         plt.axvline(x=0,color='black',linestyle='--')
-        plt.scatter(r,0,color='red')
+        plt.scatter(biseccion(a, b),0,color='red')
         plt.title('Raiz(x)')
         plt.grid(True)
         plt.xlabel('Eje de las x')
@@ -95,9 +102,3 @@ def main():
 
         plt.tight_layout()  # Ajusta los subplots para evitar superposiciones
         plt.show()
-
-
-# Ejecuta la funcion principal
-if __name__ == '__main__':
-    main()
-
