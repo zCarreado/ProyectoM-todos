@@ -81,8 +81,3 @@ plt.title('Raiz(x)')
 plt.grid(True)
 plt.xlabel('Eje de las x')
 plt.ylabel('Eje de las y')
-
-
-
-plt.tight_layout()  # Ajusta los subplots para evitar superposiciones
-plt.show()
