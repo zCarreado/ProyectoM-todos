@@ -3,12 +3,13 @@ import sympy as sp
 def bisection_solver(equation_str, a, b, tol=1e-4, max_iterations=100):
 
     x = sp.symbols('x')
+ # Convierte la ecuación de cadena a una expresión simbólica
     equation = sp.sympify(equation_str)
     
-
+# Crea una función lambda para evaluar la expresión numéricamente
     f = sp.lambdify(x, equation)
     
-
+# Verifica si la función cambia de signo en el intervalo [a, b]
     if f(a) * f(b) >= 0:
         raise ValueError("La función no cambia de signo en el intervalo [a, b].")
     
@@ -40,4 +41,3 @@ if __name__ == "__main__":
         print(e)
     except Exception as e:
         print(f"Ocurrió un error: {e}")
-
