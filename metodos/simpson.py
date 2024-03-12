@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     if n % 2 != 0:
         print("El número de subintervalos debe ser par.")
-    else:
+    else: 
 
         integral_aproximada = simpson(ecuacion, a, b, n)
         print(f"Aproximación de la integral definida: {integral_aproximada:.6f}")
