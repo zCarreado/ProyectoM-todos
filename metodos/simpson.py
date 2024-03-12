@@ -18,7 +18,7 @@ def simpson(func, a, b, n):
 
 if __name__ == "__main__":
 
-    ecuacion = input("Ingresa la función en términos de 'x': ")
+    ecuacion = input("Ingresa la función en términos de 'x':  ")
     a = float(input("Ingresa el límite inferior 'a': "))
     b = float(input("Ingresa el límite superior 'b': "))
     n = int(input("Ingresa el número de subintervalos 'n' (debe ser par): "))
